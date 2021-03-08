@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПМИ</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/splide.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/player.css">
+</head>
+
+<body class="main">
+  <div class="player">
+    <img class="player__cover" src="./images/common/player_cover.png" alt="Feduk — Бэнгер (prod. Cream Soda)">
+    <div class="player__title">
+      Feduk — Бэнгер (prod. Cream Soda) 
+    </div>
+    <button class="player__volume player__volume_unmute">
+      <svg width="28" height="28" viewbox="0 0 28 28" fill="none">
+        <path d="M6.87046 18.6667H2.33329C2.02387 18.6667 1.72713 18.5437 1.50833 18.3249C1.28954 18.1061 1.16663 17.8094 1.16663 17.5V10.5C1.16663 10.1906 1.28954 9.89382 1.50833 9.67503C1.72713 9.45623 2.02387 9.33332 2.33329 9.33332H6.87046L13.0468 4.27932C13.1323 4.20926 13.2359 4.16491 13.3455 4.15144C13.4552 4.13798 13.5665 4.15594 13.6663 4.20325C13.7662 4.25055 13.8506 4.32526 13.9097 4.41866C13.9687 4.51206 14 4.62031 14 4.73082V23.2692C14 23.3797 13.9687 23.4879 13.9097 23.5813C13.8506 23.6747 13.7662 23.7494 13.6663 23.7967C13.5665 23.844 13.4552 23.862 13.3455 23.8485C13.2359 23.8351 13.1323 23.7907 13.0468 23.7207L6.87163 18.6667H6.87046ZM22.6403 23.4897L20.9883 21.8377C22.0943 20.8536 22.9791 19.6463 23.5844 18.2953C24.1897 16.9443 24.5017 15.4804 24.5 14C24.5014 12.4438 24.1562 10.9067 23.4895 9.50059C22.8227 8.09443 21.8511 6.85443 20.6453 5.87065L22.302 4.21398C23.7235 5.41745 24.8654 6.91655 25.648 8.60671C26.4306 10.2969 26.8351 12.1374 26.8333 14C26.8333 17.7602 25.2163 21.1423 22.6403 23.4897ZM18.5068 19.3562L16.8478 17.6972C17.4142 17.2616 17.8728 16.7017 18.1882 16.0606C18.5036 15.4195 18.6673 14.7145 18.6666 14C18.6666 12.3317 17.7916 10.8675 16.4733 10.0427L18.1521 8.36382C19.0358 9.01387 19.7541 9.86281 20.2488 10.842C20.7436 11.8211 21.0009 12.9029 21 14C21 16.149 20.0316 18.0717 18.5068 19.3562Z" fill="#EF8632"/>
+      </svg>
+    </button>
+    <button class="player__volume player__volume_mute">
+      <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.87046 18.6667H2.33329C2.02387 18.6667 1.72713 18.5437 1.50833 18.3249C1.28954 18.1061 1.16663 17.8094 1.16663 17.5V10.5C1.16663 10.1906 1.28954 9.89382 1.50833 9.67503C1.72713 9.45623 2.02387 9.33332 2.33329 9.33332H6.87046L13.0468 4.27932C13.1323 4.20926 13.2359 4.16491 13.3455 4.15144C13.4552 4.13798 13.5665 4.15594 13.6663 4.20325C13.7662 4.25055 13.8506 4.32526 13.9097 4.41866C13.9687 4.51206 14 4.62031 14 4.73082V23.2692C14 23.3797 13.9687 23.4879 13.9097 23.5813C13.8506 23.6747 13.7662 23.7494 13.6663 23.7967C13.5665 23.844 13.4552 23.862 13.3455 23.8485C13.2359 23.8351 13.1323 23.7907 13.0468 23.7207L6.87163 18.6667H6.87046ZM23.8163 14L27.9416 18.1253L26.292 19.775L22.1666 15.6497L18.0413 19.775L16.3916 18.1253L20.517 14L16.3916 9.87465L18.0413 8.22498L22.1666 12.3503L26.292 8.22498L27.9416 9.87465L23.8163 14Z" fill="#EF8632"/>
+      </svg>
+    </button>
+    <button class="player__button player__button_play">
+      <svg width="18" height="24" viewbox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 24V0L18 12L0 24Z" fill="#fff"/>
+      </svg>
+    </button>
+    <button class="player__button player__button_pause">
+      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="2" width="7" height="20" fill="#fff"/>
+        <rect x="14" y="2" width="7" height="20" fill="#fff"/>
+      </svg>        
+    </button>
+  </div>
+
+  <menu class="menu">
+    <ul class="menu__list">
+      <li class="menu__list__item menu__list__item_mob">
+        Меню
+      </li>
+      <li class="menu__list__item">
+        <a href="/index.html" class="menu__link">О нас</a>
+      </li>
+      <li class="menu__list__item">
+        <a href="/artists.html" class="menu__link">Артисты</a>
+      </li>
+      <li class="menu__list__item">
+        <a href="" class="menu__link">Каталог</a>
+      </li>
+      <li class="menu__list__item">
+        <a href="booking.html" class="menu__link">Букинг</a>
+      </li>
+      <li class="menu__list__item">
+        <a href="" class="menu__link">Контакты</a>
+      </li>
+      <li class="menu__list__item menu__list__item_btn">
+        <a href="index.html/#demo" class="button button_menu">Отправить демо</a>
+      </li>
+    </ul>
+    <div class="menu__top">
+      <span class="menu__title">Меню</span>
+      <div class="menu__burger">
+        <div class="menu__burger__container">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </menu>
+
+  <section class="main__gallery">
+    <div class="main__gallery__controls">
+      <img class="main__gallery__arrow main__gallery__arrow_left" src="./images/main/arrow.svg" alt="left">
+      <span class="main__gallery__counter">1/5</span>
+      <img class="main__gallery__arrow main__gallery__arrow_right" src="./images/main/arrow.svg" alt="right">
+    </div>
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li data-track-name="track1" data-track-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" class="splide__slide main__block">
+            <div class="main__gallery__subtitle">
+              Первое музыкальное издательство
+            </div>
+            <div class="main__gallery__title">
+              Feduk — Бэнгер
+            </div>
+            <div class="main__gallery__info">
+              <div class="main__gallery__mob-title">Feduk — Бэнгер</div>
+              Самый, самый свежий хит, от короля летних хитов, слушайте на всех стриминговых площадках прямо сейчас!
+            </div>
+          </li>
+          <li data-track-name="track2" data-track-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" class="splide__slide main__block">
+            <div class="main__gallery__subtitle">
+              Первое музыкальное издательство
+            </div>
+            <div class="main__gallery__title">
+              Feduk — Бэнгер
+            </div>
+            <div class="main__gallery__info">
+              <div class="main__gallery__mob-title">Feduk — Бэнгер</div>
+              Самый, самый свежий хит, от короля летних хитов, слушайте на всех стриминговых площадках прямо сейчас!
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__numbers main__numbers_desktop numbers main__block">
+    <div class="main__numbers__blob main__numbers__blob_bl"></div>
+    <div class="main__numbers__blob main__numbers__blob_tl"></div>
+    <div class="main__numbers__blob main__numbers__blob_tr"></div>
+    <div class="main__numbers__blob main__numbers__blob_mid"></div>
+    <div class="main__numbers__blob main__numbers__blob_br"></div>
+    <div class="numbers__menu">
+      <div class="numbers__item numbers__item_active">
+        <span>
+          Стримы
+        </span>
+      </div>
+      <div class="numbers__item">
+        <span>
+          Каталог
+        </span>
+      </div>
+      <div class="numbers__item">
+        <span>
+          В России
+        </span>
+      </div>
+      <div class="numbers__item numbers__item_noborder">
+        <span>
+          Цифровые площадки
+        </span>
+      </div>
+      <div class="numbers__path"></div>
+      <div class="numbers__arrow">
+        <svg width="26" height="26" viewbox="0 0 26 26" fill="none">
+          <path d="M24 13H3.00725e-07" stroke="#6801E6" stroke-width="2" />
+          <path d="M9.6 1L24 13L9.6 25" stroke="#6801E6" stroke-width="2" />
+        </svg>
+      </div>
+    </div>
+    <div class="numbers__slides">
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide main__block">
+              <div class="numbers__slide">
+                <div class="numbers__slide__count">
+                  1 500 000 000
+                </div>
+                <div class="numbers__slide__info">
+                  Ежемесячное потребление стримов (прослушиваний) каталога «Первого музыкального»
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide main__block">
+              <div class="numbers__slide">
+                <div class="numbers__slide__count">
+                  1 000 000
+                </div>
+                <div class="numbers__slide__info">
+                  Более 1 миллиона музыкальных произведений в каталоге «Первого Музыкального»
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide main__block">
+              <div class="numbers__slide">
+                <div class="numbers__slide__count">
+                  <span>более</span> 30%
+                </div>
+                <div class="numbers__slide__info">
+                  Такая доля каталога “Первого Музыкального” на рынке аудио-произведений в России
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide main__block">
+              <div class="numbers__slide numbers__slide_dark">
+                <div class="numbers__slide__count">
+                  20% <span>рынка</span>
+                </div>
+                <div class="numbers__slide__info">
+                  Занимает группа компаний «Первого Музыкального» в цифровых сервисах
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__numbers main__numbers_mobile numbers main__block">
+    <div class="numbers__title"></div>
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li data-title="Стримы" class="splide__slide main__block">
+            <div class="numbers__slide">
+              <div class="numbers__slide__count">
+                1 500 000 000
+              </div>
+              <div class="numbers__slide__info">
+                Ежемесячное потребление стримов (прослушиваний) каталога «Первого музыкального»
+              </div>
+            </div>
+          </li>
+          <li data-title="Каталог" class="splide__slide main__block">
+            <div class="numbers__slide">
+              <div class="numbers__slide__count">
+                1 000 000
+              </div>
+              <div class="numbers__slide__info">
+                Более 1 миллиона музыкальных произведений в каталоге «Первого Музыкального»
+              </div>
+            </div>
+          </li>
+          <li data-title="В России" class="splide__slide main__block">
+            <div class="numbers__slide">
+              <div class="numbers__slide__count">
+                <span>более</span> 30%
+              </div>
+              <div class="numbers__slide__info">
+                Такая доля каталога “Первого Музыкального” на рынке аудио-произведений в России
+              </div>
+            </div>
+          </li>
+          <li data-title="Цифровые площадки" class="splide__slide main__block">
+            <div class="numbers__slide">
+              <div class="numbers__slide__count">
+                20% <span>рынка</span>
+              </div>
+              <div class="numbers__slide__info">
+                Занимает группа компаний «Первого Музыкального» в цифровых сервисах
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="numbers__next">
+      <div class="numbers__arrow">
+        <svg width="26" height="26" viewbox="0 0 26 26" fill="none">
+          <path d="M24 13H3.00725e-07" stroke="#ffffff" stroke-width="2" />
+          <path d="M9.6 1L24 13L9.6 25" stroke="#ffffff" stroke-width="2" />
+        </svg>
+      </div>
+      <span class="numbers__next__text"></span>
+    </div>
+  </section>
+
+  <section class="main__artists main__artists_mob artists">
+    <div class="main__artists__tape">
+      <div class="artists__block">
+        <div class="artists__img">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__info">
+          <div class="artists__info__name">
+            Наталья Подольская
+          </div>
+          <div class="artists__info__name">
+            Краткая информация об артисте, ну буквально несколько строк, хотя бы чтобы она заполнялась постепенно
+          </div>
+          <div class="networks">
+            <a class="icon icon_vk" href="#"></a>
+            <a class="icon icon_inst" href="#"></a>
+            <a class="icon icon_tw" href="#"></a>
+            <a class="icon icon_yt" href="#"></a>
+            <a class="icon icon_fb" href="#"></a>
+          </div>
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__img">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__info">
+          <div class="artists__info__name">
+            Наталья Подольская
+          </div>
+          <div class="artists__info__name">
+            Краткая информация об артисте, ну буквально несколько строк, хотя бы чтобы она заполнялась постепенно
+          </div>
+          <div class="networks">
+            <a class="icon icon_vk" href="#"></a>
+            <a class="icon icon_inst" href="#"></a>
+            <a class="icon icon_tw" href="#"></a>
+            <a class="icon icon_yt" href="#"></a>
+            <a class="icon icon_fb" href="#"></a>
+          </div>
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__img">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__info">
+          <div class="artists__info__name">
+            Наталья Подольская
+          </div>
+          <div class="artists__info__name">
+            Краткая информация об артисте, ну буквально несколько строк, хотя бы чтобы она заполнялась постепенно
+          </div>
+          <div class="networks">
+            <a class="icon icon_vk" href="#"></a>
+            <a class="icon icon_inst" href="#"></a>
+            <a class="icon icon_tw" href="#"></a>
+            <a class="icon icon_yt" href="#"></a>
+            <a class="icon icon_fb" href="#"></a>
+          </div>
+        </div>
+      </div>
+      <div class="artists__all">
+        <div class="artists__all__info">
+          <div class="artists__all__title">Артисты</div>
+          <div class="artists__all__text">
+            <p>
+              Наш лейбл в данный момент помогает развиваться более 100 000 артистов.
+            </p>
+            <p>
+              Вы можете ознакомиться с полным списком артистов и информацией о них на странице артистов. Кто знает может
+              среди них есть ваши любимые исполнители.
+            </p>
+          </div>
+        </div>
+        <a href="/artists.html" class="artists__item__button">Все артисты</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__artists main__artists_desktop artists">
+    <div class="main__artists__tape">
+      <div class="artists__block">
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__item artists__item_large">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+
+      <div class="artists__block">
+        <div class="artists__item artists__item_info">
+          <div class="artists__item__text">
+            <div class="artists__item__title">
+              Артисты
+            </div>
+            <div class="artists__item__subtitle">
+              Наш лейбл в данный момент помогает развиваться более 100 000 артистов.
+            </div>
+          </div>
+          <a href="/artists.html" class="artists__item__button">Все артисты</a>
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__item artists__item_large">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+        <div class="artists__item">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+      <div class="artists__block">
+        <div class="artists__item artists__item_large">
+          <img src="./images/common/dorn.png" alt="Dorn" class="artists__item__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="main__join join">
+    <form class="join__form">
+      <div class="join__info">
+        <div class="join__info__text">
+          <div class="join__info__title">
+            Хотите к нам?
+          </div>
+          <div class="join__info__text">
+            <p>
+              Если вы музыкант и мечтаете работать с лейблом
+              Первое музыкальное издательство — присылайте нам свой материал. Мы всегда отвечаем на все присланные
+              письма
+              после прослушивания, пожалуйста дождитесь ответа прежде чем повторять свое обращение.
+            </p>
+            <p>
+              Необходимо загрузить запись в формате MP3, записи в другом формате не принимаются к рассмотрению,
+              пожалуйста
+              будьте внимательны и отнеситесь к этому ответственно.
+            </p>
+          </div>
+        </div>
+        <div class="join__info__submit">
+          <div class="join__info__slider join__slider">
+            <div class="join__slider__send">Отправить демо</div>
+            <div class="join__slider__contol">
+              <svg width="26" height="26" viewbox="0 0 26 26" fill="none">
+                <path d="M24 13H3.00725e-07" stroke="#DDCEF0" stroke-width="2" />
+                <path d="M9.6 1L24 13L9.6 25" stroke="#DDCEF0" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <button type="submit" />
+        </div>
+      </div>
+      <div class="join__inputs">
+        <div class="join__inputs__top">
+          <label class="join__inputs__label">
+            <input placeholder=" " required type="text" name="name" class="join__inputs__input">
+            <div class="join__inputs__text">Имя или псевдоним</div>
+          </label>
+          <label class="join__inputs__label">
+            <input placeholder=" " required type="email" name="email" class="join__inputs__input">
+            <div class="join__inputs__text">Ваш контактный E-mail</div>
+            <div class="join__inputs__warning"></div>
+          </label>
+        </div>
+        <label class="button button_file">
+          <span>Загрузить запись</span>
+          <input accept=".mp3" required name="file" type="file">
+          <span class="button__remove"></span>
+        </label>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__map">
+          <div class="footer__title">
+            Карта сайта
+          </div>
+          <div class="footer__links">
+            <a class="footer__links__link" href="">О нас</a>,
+            <a class="footer__links__link" href="">Услуги</a>,
+            <a class="footer__links__link" href="">Букинг</a>,
+            <a class="footer__links__link" href="">Артисты</a>,
+            <a class="footer__links__link" href="">Контакты</a>
+          </div>
+        </div>
+        <div class="footer__networks">
+          <div class="footer__title">
+            Мы в социальных сетях
+          </div>
+          <div class="footer__links">
+            <a class="footer__links__link" href="">Facebook</a>,
+            <a class="footer__links__link" href="">Instagram</a>,
+            <a class="footer__links__link" href="">YouTube</a>,
+            <a class="footer__links__link" href="">VK</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__address">
+        127015, г. Москва, <br>
+        ул. Новодмитровская, дом 2к1, 15 этаж
+      </div>
+      <a href="#" target="_blank" class="footer__rights">
+        <div class="footer__rights__holder">Правообладателю</div>
+        <div class="footer__rights__sign">1996-2020 © Первое Музыкальное Издательство</div>
+        <img class="footer__rights__img" src="images/common/copyright.png" alt="">
+        <img class="footer__rights__img footer__rights__img_hover" src="images/common/copyright-light.png" alt="">
+      </a>
+    </div>
+    <div class="footer__mobile">
+      1996-2020 © Первое Музыкальное Издательство
+    </div>
+  </footer>
+
+  <script src="./js/splide.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
