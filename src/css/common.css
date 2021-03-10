@@ -219,6 +219,17 @@ html {
   max-width: 675px;
 }
 
+.head__text_horizontal {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__text_horizontal p {
+  width: 675px;
+  max-width: 48%;
+}
+
 /* FOOTER */
 
 .footer__container {
