@@ -229,6 +229,7 @@ html {
   line-height: 23px;
   color: #ddcef0;
 }
+
 .footer__mobile {
   display: none;
   padding-top: 30px;
@@ -336,6 +337,45 @@ html {
   color: #6801e6;
   width: 34%;
 }
+
+.footer_light .footer__container {
+  background: #DDCEF0;
+  color: #8027ea;
+}
+
+.footer_light .footer__links {
+  color: #8027ea;
+}
+
+.footer_light .footer__links__link {
+  color: #8027ea;
+}
+
+.footer_light .footer__rights {
+  color: #DDCEF0;
+  background: #8027ea;
+}
+
+.footer_light .footer__rights__img {
+  display: none;
+}
+
+.footer_light .footer__rights__img_hover {
+  display: block;
+}
+
+.footer_light .footer__rights .footer__rights__holder {
+  background-image: url('../images/common/new_tab_light.svg');
+}
+
+.footer_light .footer__rights:hover .footer__rights__holder {
+  opacity: 1;
+}
+
+.footer_light .footer__rights:hover {
+  opacity: 0.8;
+}
+
 
 /* BUTTONS */
 
