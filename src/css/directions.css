@@ -35,51 +35,51 @@
 }
 
 .routes__block:nth-child(1) {
-  background-image: url('../images/common/music.svg');
+  background-image: url('../images/icons/music.svg');
 }
 
 .routes__block:nth-child(2) {
-  background-image: url('../images/common/film-dark.svg');
+  background-image: url('../images/icons/film-dark.svg');
 }
 
 .routes__block:nth-child(3) {
-  background-image: url('../images/common/file-paper-dark.svg');
+  background-image: url('../images/icons/file-paper-dark.svg');
 }
 
 .routes__block:nth-child(4) {
-  background-image: url('../images/common/chat-dark.svg');
+  background-image: url('../images/icons/chat-dark.svg');
 }
 
 .routes__block:nth-child(5) {
-  background-image: url('../images/common/ticket-dark.svg');
+  background-image: url('../images/icons/ticket-dark.svg');
 }
 
 .routes__block:nth-child(6) {
-  background-image: url('../images/common/star-dark.svg');
+  background-image: url('../images/icons/star-dark.svg');
 }
 
 .routes__block:nth-child(7) {
-  background-image: url('../images/common/train-dark.svg');
+  background-image: url('../images/icons/train-dark.svg');
 }
 
 .routes__block_open:nth-child(3),
 .routes__block:hover:nth-child(3) {
-  background-image: url('../images/common/file-paper.svg');
+  background-image: url('../images/icons/file-paper.svg');
 }
 
 .routes__block_open:nth-child(4),
 .routes__block:hover:nth-child(4) {
-  background-image: url('../images/common/chat.svg');
+  background-image: url('../images/icons/chat.svg');
 }
 
 .routes__block_open:nth-child(5),
 .routes__block:hover:nth-child(5) {
-  background-image: url('../images/common/ticket.svg');
+  background-image: url('../images/icons/ticket.svg');
 }
 
 .routes__block_open:nth-child(7),
 .routes__block:hover:nth-child(7) {
-  background-image: url('../images/common/train.svg');
+  background-image: url('../images/icons/train.svg');
 }
 
 .routes__block:first-child,
@@ -256,23 +256,23 @@
   .routes__block:nth-child(3) {
     background-color: #EF8632;
     color: #fff;
-    background-image: url('../images/common/file-paper.svg');
+    background-image: url('../images/icons/file-paper.svg');
   }
 
   .routes__block:nth-child(4) {
     background-color: #79C2BE;
     color: #fff;
-    background-image: url('../images/common/chat.svg');
+    background-image: url('../images/icons/chat.svg');
   }
 
   .routes__block:nth-child(5) {
     background-color: #6801E6;
     color: #fff;
-    background-image: url('../images/common/ticket.svg');
+    background-image: url('../images/icons/ticket.svg');
   }
 
   .routes__block:nth-child(7) {
-    background-image: url('../images/common/train.svg');
+    background-image: url('../images/icons/train.svg');
   }
 
   .routes__block:nth-child(6) {

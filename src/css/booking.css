@@ -87,7 +87,7 @@
   height: 60px;
   border-radius: 60px;
   background: rgba(255, 255, 255, 0.3);
-  background-image: url('../images/common/phone.svg');
+  background-image: url('../images/icons/phone.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -98,7 +98,7 @@
   height: 60px;
   border-radius: 60px;
   background: rgba(255, 255, 255, 0);
-  background-image: url('../images/common/more.svg');
+  background-image: url('../images/icons/more.svg');
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -132,7 +132,7 @@
   position: absolute;
   right: 5px;
   top: 5px;
-  background-image: url('../images/common/mini-cross.svg');
+  background-image: url('../images/icons/mini-cross.svg');
   background-repeat: no-repeat;
   background-position: center;
 }

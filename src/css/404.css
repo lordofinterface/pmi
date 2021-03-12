@@ -1,0 +1,96 @@
+.error404__block {
+  background: #6801e6;
+  border-radius: 35px;
+  padding-bottom: 30px;
+  margin-bottom: 5px;
+}
+
+.error404__block .head {
+  background: transparent;
+}
+
+.error404__block .head__subtitle,
+.error404__block .head__title,
+.error404__block .head__text {
+  color: #ddcef0;
+}
+
+.error404 .menu__link:hover,
+.error404 .button_menu:hover {
+  color: #ddcef0;
+}
+
+.error404__main {
+  display: flex;
+  padding-right: 50px;
+}
+
+.error404__code {
+  width: 75%;
+  display: block;
+}
+
+.error404__info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 45px;
+  padding-top: 60px;
+}
+
+.error404__info__icon {
+  margin-bottom: 40px;
+}
+
+.error404__info__text {
+  font-size: 20px;
+  line-height: 120%;
+  color: #ddcef0;
+}
+
+@media (max-width: 1100px) {
+  .error404__main {
+    padding: 30px;
+  }
+
+  .error404__code {
+    width: 100%;
+  }
+
+  .error404__main {
+    flex-direction: column;
+  }
+
+  .error404__info {
+    padding-top: 30px;
+    padding-left: 0;
+  }
+
+  .error404__info__icon {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+  .error404__info__text {
+    font-size: 18px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 760px) {
+  .error404__main {
+    padding-top: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .error404__info {
+    padding-top: 25px;
+  }
+
+  .error404__info__text {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}

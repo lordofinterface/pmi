@@ -74,7 +74,7 @@ html {
 .menu__top {
   font-size: 20px;
   line-height: 23px;
-  color: #ffffff;
+  color: #DDCEF0;
   cursor: pointer;
 }
 
@@ -112,7 +112,7 @@ html {
 }
 
 .menu__link {
-  color: #ffffff;
+  color: #DDCEF0;
   text-decoration: none;
 }
 
@@ -175,7 +175,7 @@ html {
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #fff;
+  background: #DDCEF0;
   transition: all 0.15s ease-in;
 }
 
@@ -219,6 +219,11 @@ html {
   max-width: 675px;
 }
 
+.head__text a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 .head__text_horizontal {
   min-width: 100%;
   display: flex;
@@ -250,7 +255,7 @@ html {
   text-align: center;
   color: hsla(0, 0%, 0%, 0.3);
   padding-bottom: 69px;
-  background-image: url('../images/common/copyright-gray.png');
+  background-image: url('../images/icons/copyright-gray.png');
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 75%;
@@ -322,7 +327,7 @@ html {
 
 .footer__rights__holder {
   padding-left: 30px;
-  background-image: url('../images/common/new_tab.svg');
+  background-image: url('../images/icons/new_tab.svg');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -332,7 +337,7 @@ html {
 }
 
 .footer__rights:hover .footer__rights__holder {
-  background-image: url('../images/common/new_tab_light.svg');
+  background-image: url('../images/icons/new_tab_light.svg');
   opacity: 0.6;
 }
 
@@ -376,7 +381,7 @@ html {
 }
 
 .footer_light .footer__rights .footer__rights__holder {
-  background-image: url('../images/common/new_tab_light.svg');
+  background-image: url('../images/icons/new_tab_light.svg');
 }
 
 .footer_light .footer__rights:hover .footer__rights__holder {
@@ -455,13 +460,13 @@ html {
 }
 
 .button_menu {
-  color: #fff;
+  color: #DDCEF0;
   background-color: rgba(255, 255, 255, 0.15);
   text-decoration: none;
 }
 
 .button_menu:hover {
-  color: #fff;
+  color: #DDCEF0;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -495,23 +500,23 @@ html {
 }
 
 .icon_vk {
-  background-image: url('../images/common/vk.svg');
+  background-image: url('../images/icons/vk.svg');
 }
 
 .icon_inst {
-  background-image: url('../images/common/instagram.svg');
+  background-image: url('../images/icons/instagram.svg');
 }
 
 .icon_tw {
-  background-image: url('../images/common/twitter.svg');
+  background-image: url('../images/icons/twitter.svg');
 }
 
 .icon_yt {
-  background-image: url('../images/common/youtube.svg');
+  background-image: url('../images/icons/youtube.svg');
 }
 
 .icon_fb {
-  background-image: url('../images/common/facebook.png');
+  background-image: url('../images/icons/facebook.png');
 }
 
 /* MEDIA TABLET */
