@@ -62,8 +62,29 @@ body.timeline {
   color: #ffffff;
   background: #6801e6;
   padding: 14px 40px;
+  padding-right: 80px;
   border-radius: 0 12px 12px 0;
   margin-bottom: 63px;
+  background-image: url('../images/icons/register.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: calc(100% - 30px) center;
+}
+
+.timeline__col__name_file {
+  background-image: url('../images/icons/file-h.svg');
+}
+
+.timeline__col__name_user {
+  background-image: url('../images/icons/user.svg');
+}
+
+.timeline__col__name_start {
+  background-image: url('../images/icons/star-h.svg');
+}
+
+.timeline__col__name_present {
+  background-image: url('../images/icons/present.svg');
 }
 
 .timeline__col__desc {
@@ -183,6 +204,7 @@ body.timeline {
   .timeline__col__name {
     margin-bottom: 53px;
     padding: 14px 30px;
+    padding-right: 80px;
   }
 
   .timeline__path__cell_desk {
