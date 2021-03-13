@@ -194,6 +194,11 @@ body.timeline {
     min-width: 480px;
   }
 
+  .timeline__col:last-child {
+    width: 420px;
+    min-width: 420px;
+  }
+
   .timeline__mid {
     top: 167px;
   }
