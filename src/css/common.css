@@ -5,6 +5,12 @@
 
 @font-face {
   font-family: 'Space Grotesk';
+  font-weight: normal;
+  src: url(../fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Space Grotesk Light';
   src: url(../fonts/Space_Grotesk/SpaceGrotesk-Light.ttf);
 }
 
