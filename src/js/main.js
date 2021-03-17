@@ -101,11 +101,6 @@ function initNumbersSlider() {
     setArrowPosition(index);
     numbersSlider.go(index);
     container.style.backgroundColor = bgColors[index];
-    if (index === 3) {
-      lastItem.style.color = '#6801e6';
-    } else {
-      lastItem.style.color = '';
-    }
   }
 
   function removeActiveClassList() {
@@ -126,7 +121,7 @@ function initNumbersSlider() {
     const itemPosition = currentItem.getBoundingClientRect();
     const initPathWidth = 60;
     const arrowWidth = 60;
-    const additionalOffset = 10;
+    const additionalOffset = 20;
 
     const arrowValue = itemPosition.left - menuOffsetLeft - arrowWidth - additionalOffset;
     arrow.style.transform = `translateX(${index === 0 ? 0 : arrowValue}px)`;
@@ -154,14 +149,14 @@ function initArtistsScroll() {
   }
 
   if (window.innerWidth > 980) {
-    document.addEventListener('mousemove', mouseMoveHandler);
+    artistsBlock.addEventListener('mousemove', mouseMoveHandler);
   }
 
   window.addEventListener('resize', function () {
     if (window.innerWidth > 980) {
-      document.addEventListener('mousemove', mouseMoveHandler);
+      artistsBlock.addEventListener('mousemove', mouseMoveHandler);
     } else {
-      document.removeEventListener('mousemove', mouseMoveHandler);
+      artistsBlock.removeEventListener('mousemove', mouseMoveHandler);
     }
   });
 
@@ -290,6 +285,7 @@ const Player = {
 function initParallax() {
   const container = document.querySelector('.main__numbers_desktop');
   const elems = document.querySelectorAll(".main__numbers__blob");
+  const slidesText = document.querySelectorAll('.numbers__slide');
   container.addEventListener("mousemove", parallax);
 
   function parallax(e) {
@@ -297,9 +293,13 @@ function initParallax() {
       let _h = window.innerHeight/2;
       let _mouseX = e.clientX;
       let _mouseY = e.clientY;
-      let coords = `${(_mouseX - _w) * 0.06}%, ${(_mouseY - _h) * 0.06}%`;
+      let blobCoords = `${(_mouseX - _w) * 0.06}%, ${(_mouseY - _h) * 0.06}%`;
+      let textCoords = `${(_mouseX - _w) * 0.005}%, ${(_mouseY - _h) * 0.06}%`;
       elems.forEach(function (el) {
-        el.style.transform = `translate(${coords})`;
+        el.style.transform = `translate(${blobCoords})`;
+      });
+      slidesText.forEach(function (el) {
+        el.style.transform = `translate(${textCoords})`;
       });
   }
 }

@@ -49,7 +49,7 @@
   color: #6801e6;
   margin-top: 33px;
   text-decoration: none;
-  background-image: url('../images/icons/copyright.png');
+  background-image: url('../images/icons/copyright.svg');
   background-repeat: no-repeat;
   background-size: 36px 24px;
   background-position: calc(100% - 30px) center;
@@ -80,7 +80,7 @@
   font-size: 18px;
   line-height: 130%;
   color: hsla(0, 0%, 0%, 0.3);
-  background-image: url('../images/icons/copyright-gray.png');
+  background-image: url('../images/icons/copyright-gray.svg');
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -88,7 +88,7 @@
 .error503__footer__bottom:hover {
   background-color: #6801e6;
   color: #fff;
-  background-image: url('../images/icons/copyright-light.png');
+  background-image: url('../images/icons/copyright-light.svg');
 }
 
 .error503__footer__bottom:hover .error503__footer__rights:before {

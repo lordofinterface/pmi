@@ -8,7 +8,7 @@ function initTimelineScroll() {
     '.history__timeline .timeline__path'
   );
   const yearsList = document.querySelectorAll('.timeline__col__year');
-  let artistsTapeWidth = artistsTape.getBoundingClientRect().width;
+  let artistsTapeWidth = artistsTape.getBoundingClientRect().width + 800;
 
   function mouseMoveHandler(event) {
     const percent = parseFloat(event.clientX / window.innerWidth);
@@ -30,13 +30,14 @@ function initTimelineScroll() {
   }
 
   if (window.innerWidth > 980) {
+    artistsBlock.scrollLeft = 800;
     artistsBlock.addEventListener('mousemove', mouseMoveHandler);
   }
 
   window.addEventListener('resize', function () {
     if (window.innerWidth > 980) {
       artistsBlock.removeEventListener('mousemove', mouseMoveHandler);
-      artistsTapeWidth = artistsTape.getBoundingClientRect().width;
+      artistsTapeWidth = artistsTape.getBoundingClientRect().width + 800;
       center = window.innerWidth / 2;
       artistsBlock.addEventListener('mousemove', mouseMoveHandler);
     } else {

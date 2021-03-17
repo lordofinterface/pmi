@@ -42,9 +42,8 @@ body.timeline {
   line-height: 100%;
   color: #6801e6;
   margin-bottom: 34px;
-  padding-left: 40px;
   display: inline-block;
-  transform-origin: center bottom;
+  transform-origin: left bottom;
   transition: transform 0.2s ease-in;
 }
 
@@ -59,7 +58,7 @@ body.timeline {
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #DDCEF0;
   background: #6801e6;
   padding: 14px 40px;
   padding-right: 80px;
@@ -100,7 +99,9 @@ body.timeline {
   align-items: flex-start;
   position: relative;
   z-index: 2;
-  padding-left: 540px;
+  padding-left: 940px;
+  padding-right: 400px;
+  width: max-content;
 }
 
 .timeline__path {
@@ -108,13 +109,14 @@ body.timeline {
   border-radius: 35px;
   position: absolute;
   display: flex;
-  left: 0;
+  left: 400px;
+  margin-right: 400px;
   top: 208px;
   z-index: 1;
 }
 
 .timeline__path__cell {
-  border-left: 2px solid #6801e6;
+  border-left: 2px solid rgba(104, 1, 230, 0.3);
   width: 60px;
   height: 90px;
 }
@@ -153,22 +155,22 @@ body.timeline {
 .timeline__mid:after {
   content: '';
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   background: #ffffff;
   box-shadow: inset 0px 0px 5px rgba(104, 1, 230, 0.3);
   border: 5px solid #6801e6;
   border-radius: 32px;
   position: absolute;
-  left: -18px;
+  left: -13.5px;
 }
 
 .timeline__mid:before {
-  top: -32px;
+  top: -22px;
 }
 
 .timeline__mid:after {
-  bottom: -32px;
+  bottom: -22px;
 }
 
 @media (max-width: 760px) {
@@ -178,6 +180,7 @@ body.timeline {
 
   .timeline__tape {
     padding-left: 240px;
+    padding-right: 0;
   }
 
   .timeline__col__year {
@@ -192,6 +195,8 @@ body.timeline {
 
   .timeline__path {
     top: 172px;
+    left: 0;
+    margin-right: 0;
   }
 
   .timeline__col__desc {

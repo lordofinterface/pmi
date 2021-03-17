@@ -36,6 +36,7 @@
   align-items: start;
   padding-left: 45px;
   padding-top: 60px;
+  max-width: 340px;
 }
 
 .error404__info__icon {
@@ -64,6 +65,7 @@
   .error404__info {
     padding-top: 30px;
     padding-left: 0;
+    max-width: 100%;
   }
 
   .error404__info__icon {

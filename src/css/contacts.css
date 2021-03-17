@@ -68,14 +68,10 @@ a.button.contacts__info__demo {
   opacity: 0.6;
 }
 
-.contacts__info__l a:hover {
-  opacity: 0.6;
-}
-
 .contacts__info__map {
   background-image: url('../images/contacts/map.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 120% auto;
   height: 364px;
   border-radius: 35px;
 }

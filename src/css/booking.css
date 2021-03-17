@@ -26,7 +26,7 @@
   border-radius: 45px;
   left: 0;
   top: 0;
-  transition: transform 0.15s ease-in;
+  transition: transform 0.15s ease-in 0.15s;
   z-index: 9;
 }
 
@@ -65,9 +65,13 @@
   transform: translateY(75px);
 }
 
+.booking__artists__wrapper:hover + .booking__artists__controls {
+  opacity: 0;
+}
+
 .booking__artists__controls {
   width: 100%;
-  border-radius: 40px;
+  border-radius: 45px;
   height: 70px;
   margin-top: 5px;
   padding-left: 30px;
@@ -79,6 +83,7 @@
   line-height: 130%;
   color: #ffffff;
   position: relative;
+  transition: opacity 0.15s ease-in 0.2s;
 }
 
 .control__phone {
