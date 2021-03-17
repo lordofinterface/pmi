@@ -96,7 +96,7 @@ html {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  max-width: 700px;
+  max-width: 760px;
   transition: width 0.25s ease-in;
 }
 
@@ -104,6 +104,10 @@ html {
   padding: 20px 0;
   opacity: 0;
   transition: opacity 0.25s ease-in;
+}
+
+.menu__list__item_main {
+  display: none;
 }
 
 .menu__list__item_mob {
@@ -115,7 +119,7 @@ html {
 }
 
 .menu_open .menu__list {
-  max-width: 700px;
+  max-width: 760px;
   width: calc(100vw - 195px);
 }
 
@@ -722,6 +726,10 @@ html {
     padding: 0;
     padding-left: 15px;
     width: 100%;
+  }
+
+  .menu__list__item_main {
+    display: block;
   }
 
   .menu__list__item_mob {

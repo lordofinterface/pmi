@@ -6,6 +6,8 @@
 .main__gallery {
   position: relative;
   margin-bottom: 5px;
+  border-radius: 45px;
+  overflow: hidden;
 }
 
 .main__gallery .main__block {
@@ -25,6 +27,10 @@
   color: #ffffff;
   margin-bottom: 10px;
   padding-left: 3px;
+}
+
+.main__gallery .splide .main__block {
+  border-radius: 0;
 }
 
 .main__gallery__controls {
