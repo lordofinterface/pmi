@@ -1,6 +1,6 @@
 .player {
   position: fixed;
-  bottom: 30px;
+  bottom: 20px;
   left: calc(50% - 675px / 2);
   width: 675px;
   height: 70px;

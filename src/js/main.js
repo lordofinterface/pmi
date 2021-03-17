@@ -260,6 +260,28 @@ const Player = {
     }
 
     Player.load();
+    
+    document.addEventListener('scroll', function (e) {
+      const artistsBlock = document.querySelector('.main__artists_desktop');
+      const artistsBlockBounds = artistsBlock.getBoundingClientRect();
+      const edge = artistsBlock.offsetTop + artistsBlockBounds.height;
+
+      if (window.scrollY + window.innerHeight >= edge) {
+        Player.lockPosition(edge - 90);
+      } else {
+        Player.unlockPosition();
+      }
+    });
+  },
+  lockPosition: function (y) {
+    Player.container.style.position = 'absolute';
+    Player.container.style.top = y + 'px';
+    Player.container.style.bottom = 'auto';
+  },
+  unlockPosition: function () {
+    Player.container.style.position = 'fixed';
+    Player.container.style.top = 'auto';
+    Player.container.style.bottom = '20px';
   },
   play: function () {
     Player.container.classList.add('player_playing');

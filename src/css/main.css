@@ -277,6 +277,7 @@
 .main__artists__tape {
   display: flex;
   flex-wrap: nowrap;
+  margin: 2.5px 0;
 }
 
 .main__artists::-webkit-scrollbar {
@@ -351,8 +352,9 @@
 }
 
 .artists__item_large {
-  width: 712px;
-  height: 712px;
+  width: 710.5px;
+  height: 710.5px;
+  padding: 2.5px 1.5px;
 }
 
 .artists__item__img {
@@ -517,8 +519,9 @@
 }
 
 .join__inputs__text {
-  font-size: 20px;
+  font-size: 12px;
   line-height: 140%;
+  font-weight: bold;
   text-align: center;
   color: #6801e6;
   position: absolute;
@@ -527,8 +530,10 @@
   width: 100%;
   text-align: center;
   pointer-events: none;
-  transition: transform 0.1s ease-in;
-  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+  opacity: 1;
+  text-transform: uppercase;
+  transform: translateY(-20px);
 }
 
 .join__inputs__warning {
@@ -541,9 +546,8 @@
   left: calc(50% - 10px);
 }
 
-.join__inputs__input:focus + .join__inputs__text,
 .join__inputs__input:not(:placeholder-shown) + .join__inputs__text {
-  transform: scale(0.7) translateY(-35px);
+  opacity: 0.5;
 }
 
 .join__inputs__input:invalid:not(:placeholder-shown)
