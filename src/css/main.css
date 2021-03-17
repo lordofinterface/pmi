@@ -673,6 +673,26 @@
   }
 }
 
+.main__gallery__mobarrow {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0px;
+  top: 290px;
+  background-image: url('../images/icons/mob-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 17px auto;
+  background-position: center;
+  z-index: 9;
+  display: none;
+}
+
+.main__gallery__mobarrow_left {
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
+}
+
 @media (max-width: 920px) {
   .main__numbers {
     display: none;
@@ -750,6 +770,8 @@
     width: 100%;
     max-width: 100%;
     background: #79c2be;
+    font-size: 16px;
+    line-height: 130%;
   }
 
   .main__gallery__mob-title {
@@ -870,5 +892,38 @@
 
   .join__info {
     margin-bottom: 5px;
+    height: calc(100vw - 10px);
+    min-height: 400px;
+  }
+
+  .join__info__text p:nth-child(2) {
+    display: none;
+  }
+
+  .join__inputs__input {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .main__gallery__mobarrow {
+    display: block;
+  }
+
+  .main__numbers__blob {
+    display: block;
+    width: 169px;
+    height: 250px;
+    background-image: url('../images/main/tl.svg');
+    opacity: 0.9;
+    top: 77px;
+    left: -64px;
+  }
+
+  .main__numbers__blob:nth-child(2) {
+    top: 243px;
+    left: auto;
+    right: -20px;
+    transform: rotate(-90deg);
+    opacity: 0.6;
   }
 }

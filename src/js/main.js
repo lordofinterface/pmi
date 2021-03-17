@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function initTopSlider() {
   const leftArrow = document.querySelector('.main__gallery__arrow_left');
   const rightArrow = document.querySelector('.main__gallery__arrow_right');
+  const leftMobArrow = document.querySelector('.main__gallery__mobarrow_left');
+  const rightMobArrow = document.querySelector('.main__gallery__mobarrow_right');
   const counter = document.querySelector('.main__gallery__counter');
   const topSlider = new Splide('.main__gallery .splide', {
     type: 'loop',
@@ -28,6 +30,14 @@ function initTopSlider() {
   rightArrow.addEventListener('click', function () {
     topSlider.go(topSlider.index + 1);
     updateCounter();
+  });
+
+  leftMobArrow.addEventListener('click', function () {
+    topSlider.go(topSlider.index - 1);
+  });
+  
+  rightMobArrow.addEventListener('click', function () {
+    topSlider.go(topSlider.index + 1);
   });
 
   topSlider.on( 'move', function() {

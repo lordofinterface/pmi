@@ -206,6 +206,10 @@
 }
 
 @media (max-width: 920px) {
+  .routes {
+    padding: 0;
+  }
+
   .routes__block {
     padding: 30px 40px 60px 92px;
     background-position: 35px 35px;
@@ -244,6 +248,9 @@
   .routes__block {
     padding: 30px 20px;
     background-position: calc(100% - 30px) 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 130%;
   }
 
   .routes__block__title {

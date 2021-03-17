@@ -21,6 +21,7 @@
 
 body {
   padding: 5px;
+  overflow-x: hidden;
 }
 
 html {
@@ -515,6 +516,7 @@ html {
   width: 24px;
   height: 24px;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .networks .icon:hover {
@@ -637,7 +639,7 @@ html {
   .footer__title {
     font-size: 18px;
     line-height: 21px;
-    color: #6801e6;
+    color: #ddcef0;
   }
 
   .footer__links {
@@ -651,8 +653,12 @@ html {
   }
 
   .footer__rights {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .footer__rights__holder {
+    padding-left: 40px;
   }
 
   .footer__rights__link {
@@ -698,6 +704,12 @@ html {
 
   .menu__burger {
     top: 33px;
+    z-index: 9;
+  }
+
+  .button.button_full-width {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .menu__list {
@@ -750,17 +762,19 @@ html {
   }
 
   .head {
-    padding-bottom: 30px;
+    padding: 30px 20px;
   }
 
   .head__subtitle {
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 30px;
   }
 
   .head__title {
     font-size: 36px;
     line-height: 110%;
+    margin-bottom: 15px;
   }
 
   .head__text {

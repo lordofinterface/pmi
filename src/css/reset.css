@@ -46,6 +46,10 @@ table {
 	border-spacing: 0;
 }
 
+h1, h2 {
+	font-weight: normal;
+}
+
 * {
 	box-sizing: border-box;
 	outline: none;

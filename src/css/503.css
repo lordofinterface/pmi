@@ -101,6 +101,7 @@
     align-items: center;
     justify-content: center;
     background-image: none !important;
+    height: 70px;
   }
 
   .error503__footer__rights {

@@ -30,6 +30,10 @@
   display: block;
 }
 
+.error404__code_mob {
+  display: none;
+}
+
 .error404__info {
   display: flex;
   flex-direction: column;
@@ -83,8 +87,21 @@
 @media (max-width: 760px) {
   .error404__main {
     padding-top: 10px;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .head {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .error404__code {
+    display: none;
+  }
+
+  .error404__code_mob {
+    display: block;
   }
 
   .error404__info {
