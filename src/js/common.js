@@ -8,5 +8,6 @@ function initMenu() {
 
   menuTop.addEventListener('click', () => {
     menu.classList.toggle('menu_open');
+    document.querySelector('html').classList.toggle('lock');
   });
 }

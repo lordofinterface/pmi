@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.main__gallery .splide__track {
+  border-radius: 45px;
+}
+
 .main__gallery .main__block {
   height: 680px;
   background: url('../images/main/main_gallery_1.png');
@@ -497,6 +501,7 @@
 .join__inputs__top {
   display: flex;
   flex-direction: column;
+  width: 305px;
 }
 
 .join__inputs__label {
@@ -516,6 +521,10 @@
   color: #6801e6;
   outline: none;
   box-shadow: none;
+}
+
+.join__inputs__input::placeholder {
+  color: rgba(104, 1, 230, 0.5);
 }
 
 .join__inputs__text {

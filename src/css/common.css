@@ -22,10 +22,15 @@
 body {
   padding: 5px;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100vw;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100vw;
 }
 
 /* MENU */
@@ -155,7 +160,7 @@ html {
 }
 
 .menu_open .menu__burger:hover {
-  background-color: #6801E6;
+  background-color: #6801e6;
 }
 
 .menu_dark.menu_open .menu__burger:hover span {
@@ -342,7 +347,7 @@ html {
 
 .footer__rights:hover {
   background: #8027ea;
-  color: #DDCEF0;
+  color: #ddcef0;
 }
 
 .footer__rights__holder {
@@ -378,7 +383,7 @@ html {
 }
 
 .footer_light .footer__container {
-  background: #DDCEF0;
+  background: #ddcef0;
   color: #8027ea;
 }
 
@@ -391,7 +396,7 @@ html {
 }
 
 .footer_light .footer__rights {
-  color: #DDCEF0;
+  color: #ddcef0;
   background: #8027ea;
 }
 
@@ -414,7 +419,6 @@ html {
 .footer_light .footer__rights:hover {
   opacity: 0.8;
 }
-
 
 /* BUTTONS */
 
@@ -730,11 +734,13 @@ html {
     justify-content: start;
     transform: translateX(250px);
     transition: transform 0.15s ease-in;
+    position: fixed;
   }
 
   .menu_open .menu__list {
     transform: translateX(0);
     width: 250px;
+    position: absolute;
   }
 
   .menu__list__item {
@@ -784,5 +790,9 @@ html {
   .head__text {
     font-size: 16px;
     line-height: 140%;
+  }
+
+  html.lock {
+    overflow: hidden;
   }
 }
