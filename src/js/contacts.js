@@ -3,16 +3,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initMapParallax() {
-  const container = document.querySelector('.contacts__info__map');
-  container.addEventListener("mousemove", parallax);
+  window.addEventListener('scroll', throttle(parallax, 14));
 
-  function parallax(e) {
-      let _w = window.innerWidth/2;
-      let _h = window.innerHeight/2;
-      let _mouseX = e.clientX;
-      let _mouseY = e.clientY;
-      let blobCoords = `${50 - (_mouseX - _w) * 0.05}% ${10 - (_mouseY - _h) * 0.05}%`;
-      let x = `${blobCoords}`;
-      container.style.backgroundPosition = x;
+  function throttle(fn, wait) {
+    var time = Date.now();
+    return function () {
+      if (time + wait - Date.now() < 0) {
+        fn();
+        time = Date.now();
+      }
+    };
+  }
+
+  function parallax() {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.contacts__info__map');
+    const speed = window.innerWidth > 920 ? 0.13 : 0;
+    const coords = -scrolled * speed + 'px';
+    parallax.style.backgroundPositionY = coords;
   }
 }
