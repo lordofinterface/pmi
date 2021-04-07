@@ -15,20 +15,17 @@
   background-position: center;
   cursor: pointer;
   transition: background-color 0.15s ease-in;
+  z-index: 3;
 }
 
-@supports (
-  (-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))
-) {
-  .artists__gallery__more {
-    background-color: rgba(255, 255, 255, 0.15);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
+.artists__gallery__block_open .artists__gallery__more {
+  background-image: url('../images/icons/close.svg');
+  background-size: 12px;
+  background-position: center;
 }
 
 .artists__gallery__info {
-  border-radius: 20px;
+  border-radius: 45px;
   padding: 20px 10px;
   text-align: center;
   font-size: 16px;
@@ -37,15 +34,21 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  height: 90%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.artists__gallery__text {
+  width: 100%;
+  max-width: 235px;
+  margin: 25px 0;
 }
 
 .artists__modal {
@@ -102,12 +105,40 @@
 }
 
 .artists__gallery__block_large .artists__gallery__info {
-  width: 295px;
-  height: 295px;
+  width: 25vw;
+  height: 25vw;
   padding: 40px 30px;
   position: absolute;
   left: 35px;
   bottom: 35px;
+  z-index: 2;
+}
+
+.artists__gallery__overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 45px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@supports (
+  (-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))
+) {
+  .artists__gallery__overlay {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+  }
+}
+
+.artists__gallery__info_open + .artists__gallery__overlay {
+  display: block;
 }
 
 .artists__gallery__tape {
@@ -142,6 +173,11 @@
   background-color: #6801e6;
 }
 
+.artists__gallery__tape:first-child .artists__gallery__block_open .artists__gallery__more,
+.artists__gallery__tape:nth-child(4n + 5) .artists__gallery__block_open .artists__gallery__more {
+  background-color: #8634EB;
+}
+
 .artists__gallery__tape:nth-child(2) .artists__gallery__block_empty,
 .artists__gallery__tape:nth-child(4n + 6) .artists__gallery__block_empty {
   grid-column-start: 1;
@@ -156,6 +192,11 @@
 .artists__gallery__tape:nth-child(2) .artists__gallery__more,
 .artists__gallery__tape:nth-child(4n + 6) .artists__gallery__more {
   background-color: #ef8632;
+}
+
+.artists__gallery__tape:nth-child(2) .artists__gallery__block_open .artists__gallery__more,
+.artists__gallery__tape:nth-child(4n + 6) .artists__gallery__block_open .artists__gallery__more {
+  background-color: #F29E5B;
 }
 
 .artists__gallery__tape:nth-child(3) .artists__gallery__block_empty,
@@ -174,6 +215,11 @@
   background-color: #79c2be;
 }
 
+.artists__gallery__tape:nth-child(3) .artists__gallery__block_open .artists__gallery__more,
+.artists__gallery__tape:nth-child(4n + 7) .artists__gallery__block_open .artists__gallery__more {
+  background-color: #94CECB;
+}
+
 .artists__gallery__tape:nth-child(4) .artists__gallery__block_empty,
 .artists__gallery__tape:nth-child(4n + 8) .artists__gallery__block_empty {
   grid-column-start: 2;
@@ -188,6 +234,11 @@
 .artists__gallery__tape:nth-child(4) .artists__gallery__more,
 .artists__gallery__tape:nth-child(4n + 8) .artists__gallery__more {
   background-color: #b5b5b5;
+}
+
+.artists__gallery__tape:nth-child(4) .artists__gallery__block_open .artists__gallery__more,
+.artists__gallery__tape:nth-child(4n + 8) .artists__gallery__block_open .artists__gallery__more {
+  background-color: #C4C4C4;
 }
 
 .artists__gallery__block_large.artists__gallery__block_left {
@@ -214,6 +265,10 @@
 @media (max-width: 920px) {
   .artists__gallery__block_empty {
     display: none;
+  }
+
+  .artists__gallery__overlay {
+    display: none !important;
   }
 
   .artists__gallery__tape {

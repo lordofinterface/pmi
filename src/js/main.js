@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initTopSlider();
   initNumbersSlider();
   initMobileNumbersSlider();
-  initArtistsScroll();
   initVinylOpen();
   initFormProgress();
   Player.init();
@@ -143,33 +142,6 @@ function initNumbersSlider() {
       iconPath.style.stroke = index === 0 ? '#6801E6' : '#DDCEF0';
     });
   }
-}
-
-function initArtistsScroll() {
-  const infoBlock = document.querySelector('.main__artists_desktop .artists__item_info');
-  const artistsBlock = document.querySelector('.main__artists_desktop');
-  const artistsTape = document.querySelector('.main__artists_desktop .main__artists__tape');
-  const infoBlockPosition = infoBlock.getBoundingClientRect();
-  const artistsTapeWidth = artistsTape.getBoundingClientRect().width;
-  artistsBlock.scrollLeft = infoBlockPosition.left;
-
-  function mouseMoveHandler(event) {
-    const percent = parseFloat(event.clientX / window.innerWidth);
-    artistsBlock.scrollLeft = artistsTapeWidth * percent;
-  }
-
-  if (window.innerWidth > 980) {
-    artistsBlock.addEventListener('mousemove', mouseMoveHandler);
-  }
-
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 980) {
-      artistsBlock.addEventListener('mousemove', mouseMoveHandler);
-    } else {
-      artistsBlock.removeEventListener('mousemove', mouseMoveHandler);
-    }
-  });
-
 }
 
 function initVinylOpen() {

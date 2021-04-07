@@ -15,10 +15,6 @@ function initCardsInfo() {
     });
   });
 
-  document.addEventListener('mouseup', function () {
-    closeAllInfoCards();
-  });
-
   closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
     document.querySelector('html').classList.remove('lock');
@@ -39,9 +35,14 @@ function initCardsInfo() {
       infoModal.append(currentInfo);
     } else {
       const infoCard = btn.nextElementSibling;
+      const container = btn.closest('.artists__gallery__block');
       if (!infoCard.classList.contains('artists__gallery__info_open')) {
         event.preventDefault();
         infoCard.classList.add('artists__gallery__info_open');
+        container.classList.add('artists__gallery__block_open');
+      } else {
+        infoCard.classList.remove('artists__gallery__info_open');
+        container.classList.remove('artists__gallery__block_open');
       }
     }
   }
@@ -50,8 +51,14 @@ function initCardsInfo() {
     const openInfoCards = document.querySelectorAll(
       '.artists__gallery__info_open'
     );
+    const openContainers = document.querySelectorAll(
+      '.artists__gallery__block_open'
+    );
     openInfoCards.forEach((card) => {
       card.classList.remove('artists__gallery__info_open');
+    });
+    openContainers.forEach((container) => {
+      container.classList.remove('artists__gallery__block_open');
     });
   }
 }

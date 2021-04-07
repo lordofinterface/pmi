@@ -11,10 +11,7 @@ function initTimelineScroll() {
   let artistsTapeWidth = artistsTape.getBoundingClientRect().width + 800;
 
   function mouseMoveHandler(event) {
-    const percent = parseFloat(event.clientX / window.innerWidth);
     let center = window.innerWidth / 2;
-    artistsBlock.scrollLeft =
-      (artistsTapeWidth - window.innerWidth + 30) * percent;
 
     yearsList.forEach(function (year) {
       const elBounds = year.getBoundingClientRect();
@@ -31,17 +28,17 @@ function initTimelineScroll() {
 
   if (window.innerWidth > 980) {
     artistsBlock.scrollLeft = 800;
-    artistsBlock.addEventListener('mousemove', mouseMoveHandler);
+    artistsBlock.addEventListener('scroll', mouseMoveHandler);
   }
 
   window.addEventListener('resize', function () {
     if (window.innerWidth > 980) {
-      artistsBlock.removeEventListener('mousemove', mouseMoveHandler);
+      artistsBlock.removeEventListener('scroll', mouseMoveHandler);
       artistsTapeWidth = artistsTape.getBoundingClientRect().width + 800;
       center = window.innerWidth / 2;
-      artistsBlock.addEventListener('mousemove', mouseMoveHandler);
+      artistsBlock.addEventListener('scroll', mouseMoveHandler);
     } else {
-      artistsBlock.removeEventListener('mousemove', mouseMoveHandler);
+      artistsBlock.removeEventListener('scroll', mouseMoveHandler);
       yearsList.forEach(function (year) {
         year.style.transform = '';
       });
