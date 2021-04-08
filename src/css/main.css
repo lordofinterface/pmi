@@ -899,6 +899,10 @@
     padding: 40px 0 60px;
   }
 
+  .join__form .button_file {
+    height: 50px;
+  }
+
   .join__inputs__label {
     margin-bottom: 26px;
   }

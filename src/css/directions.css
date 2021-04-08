@@ -256,8 +256,9 @@
   .routes__block__title {
     max-width: calc(100% - 40px);
     font-size: 20px;
-    line-height: 120%;
+    line-height: 105%;
     height: 70px;
+    padding-right: 20px;
   }
 
   .routes__block:nth-child(2) {

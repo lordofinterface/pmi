@@ -420,6 +420,10 @@ html {
   opacity: 0.8;
 }
 
+.footer_light .footer__title {
+  color: #8027ea;
+}
+
 /* BUTTONS */
 
 .button {
@@ -490,6 +494,7 @@ html {
   color: #fff;
   background: none;
   text-decoration: none;
+  padding-left: 0;
 }
 
 .button_menu:hover {
@@ -535,8 +540,8 @@ html {
   background-image: url('../images/icons/instagram.svg');
 }
 
-.icon_tw {
-  background-image: url('../images/icons/twitter.svg');
+.icon_tt {
+  background-image: url('../images/icons/tt.svg');
 }
 
 .icon_yt {
@@ -641,8 +646,8 @@ html {
 
 @media (max-width: 760px) {
   .footer__title {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 18px;
     color: #ddcef0;
   }
 
@@ -652,8 +657,8 @@ html {
   }
 
   .footer__address {
-    font-size: 18px;
-    line-height: 140%;
+    font-size: 16px;
+    line-height: 120%;
   }
 
   .footer__rights {
@@ -662,7 +667,8 @@ html {
   }
 
   .footer__rights__holder {
-    padding-left: 40px;
+    padding-left: 30px;
+    background-size: contain;
   }
 
   .footer__rights__link {
@@ -711,7 +717,8 @@ html {
   }
 
   .menu__burger {
-    top: 15px;
+    right: 20px;
+    top: 20px;
     z-index: 9;
   }
 
@@ -741,6 +748,7 @@ html {
     transform: translateX(0);
     width: 250px;
     position: absolute;
+    padding-top: 40px;
   }
 
   .menu__list__item {
@@ -794,5 +802,12 @@ html {
 
   html.lock {
     overflow: hidden;
+  }
+
+  .footer__mobile {
+    font-size: 16px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

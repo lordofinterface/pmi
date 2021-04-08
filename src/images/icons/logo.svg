@@ -1,10 +1,16 @@
-<svg width="60" height="80" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.000244141L60 39.9937L0 80V0.000244141Z" fill="white"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="40">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 -1.52588e-05L60 39.9871H23.2887L0 -1.52588e-05Z" fill="#E24EA9"/>
+<svg width="57" height="77" viewBox="0 0 57 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L56.1941 38.4938L0 77V0Z" fill="#C023C0"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="57" height="39">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.000109735L56.1941 38.4878H21.8115L0 0.000109735Z" fill="#E24EA9"/>
 </mask>
 <g mask="url(#mask0)">
-<path d="M60 0.000244141H0V39.9937H60V0.000244141Z" fill="#E24EA9"/>
+<path d="M56.1941 0H0V38.4938H56.1941V0Z" fill="url(#paint0_linear)"/>
 </g>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 79.9809L60 39.9938H23.2887L0 79.9809Z" fill="#6801E6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 76.9818L56.1941 38.4941H21.8115L0 76.9818Z" fill="#E24EA9"/>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="19.2438" x2="56.1941" y2="19.2438" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6400E7"/>
+<stop offset="1" stop-color="#AE14C2"/>
+</linearGradient>
+</defs>
 </svg>
