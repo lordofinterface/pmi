@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initVinylOpen();
   initFormProgress();
   Player.init();
-  initParallax();
+  // initParallax();
 });
 
 function initTopSlider() {
@@ -82,65 +82,27 @@ function initMobileNumbersSlider() {
 }
 
 function initNumbersSlider() {
-  const numbersSlider = new Splide('.numbers__slides .splide', {
-    pagination: false,
-    arrows: false,
-    drag: false,
-  }).mount();
-  const lastItem = document.querySelector('.main__numbers_desktop .numbers__item_noborder');
-  const container = document.querySelector('.main__numbers_desktop');
-  const bgColors = ['#6801e6', '#EF8632', '#79C2BE', '#DDCEF0'];
+  const controls = document.querySelectorAll('.numbers__controls__item span');
+  const controlContainers = document.querySelectorAll('.numbers__controls__item');
+  const infoBlocks = document.querySelectorAll('.numbers__info__slide');
 
-  initNumbersMenu();
-
-  function initNumbersMenu() {
-    const menuItems = document.querySelectorAll(
-      '.main__numbers .numbers__item'
-    );
-    menuItems.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        sectionClick(index, item);
+  controls.forEach(control => {
+    control.addEventListener('click', e => {
+      showInfo(control.getAttribute('data-control'));
+      controlContainers.forEach(el => {
+        el.classList.remove('numbers__controls__item_active');
       });
+      control.parentElement.classList.add('numbers__controls__item_active');
     });
-  }
+  });
 
-  function sectionClick(index, item) {
-    removeActiveClassList();
-    item.classList.add('numbers__item_active');
-    setArrowPosition(index);
-    numbersSlider.go(index);
-    container.style.backgroundColor = bgColors[index];
-  }
+  function showInfo(index) {
+    const selectedBlock = document.querySelector(`.numbers__info__slide[data-index="${index}"]`);
 
-  function removeActiveClassList() {
-    const menuItems = document.querySelectorAll(
-      '.main__numbers .numbers__item'
-    );
-    menuItems.forEach((item) => {
-      item.classList.remove('numbers__item_active');
+    infoBlocks.forEach(block => {
+      block.classList.remove('numbers__info__slide_active');
     });
-  }
-
-  function setArrowPosition(index) {
-    const menuOffsetLeft = document.querySelector('.numbers__menu').getBoundingClientRect().left + 5;
-    const arrow = document.querySelector('.numbers__arrow');
-    const path = document.querySelector('.numbers__path');
-    const icon = document.querySelectorAll('.numbers__arrow svg path');
-    const currentItem = document.querySelector(`.main__numbers .numbers__item:nth-child(${index + 1}) span`);
-    const itemPosition = currentItem.getBoundingClientRect();
-    const initPathWidth = 60;
-    const arrowWidth = 60;
-    const additionalOffset = 20;
-
-    const arrowValue = itemPosition.left - menuOffsetLeft - arrowWidth - additionalOffset;
-    arrow.style.transform = `translateX(${index === 0 ? 0 : arrowValue}px)`;
-    arrow.style.backgroundColor = index === 0 ? '#DDCEF0' : '#6801E6';
-    const pathValue = itemPosition.left - menuOffsetLeft - additionalOffset;
-    path.style.width = `${index === 0 ? initPathWidth : pathValue}px`;
-
-    icon.forEach((iconPath) => {
-      iconPath.style.stroke = index === 0 ? '#6801E6' : '#DDCEF0';
-    });
+    selectedBlock.classList.add('numbers__info__slide_active');
   }
 }
 
@@ -159,11 +121,13 @@ function initVinylOpen() {
 }
 
 function initFormProgress() {
+  const vinyl = document.querySelector('.join__inputs');
   const name = document.querySelector('.join__inputs__input[name="name"]');
   const email = document.querySelector('.join__inputs__input[name="email"]');
   const fileBtn = document.querySelector('.join .button_file');
   const file = document.querySelector('.join .button_file input');
   const fileText = document.querySelector('.join .button_file span');
+  const submitBtn = document.querySelector('.join__slider');
   const fileRemoveBtn = document.querySelector(
     '.join .button_file .button__remove'
   );
@@ -182,6 +146,14 @@ function initFormProgress() {
     fileText.innerHTML = 'Загрузить запись';
     file.removeAttribute('disabled');
     checkProgress();
+  });
+
+  submitBtn.addEventListener('click', function () {
+    console.log(submitBtn.classList.contains('join__slider_finish'));
+    if (submitBtn.classList.contains('join__slider_finish')) {
+      vinyl.classList.add('join__inputs_closed');
+      submitBtn.classList.add('join__slider_send');
+    }
   });
 
   function checkProgress() {

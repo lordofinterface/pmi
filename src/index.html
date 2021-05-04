@@ -85,6 +85,7 @@
   </menu>
 
   <section class="main__gallery">
+    <img src="./images/icons/color-logo.svg" alt="" class="main__gallery__logo">
     <div class="main__gallery__controls">
       <img class="main__gallery__arrow main__gallery__arrow_left" src="./images/main/arrow.svg" alt="left">
       <span class="main__gallery__counter">1/5</span>
@@ -96,25 +97,33 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li data-track-name="Feduk — Бэнгер (prod. Cream Soda)" data-track-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" class="splide__slide main__block">
+            <img class="main__gallery__img" src="./images/main/main_gallery_1.png" alt="">
             <div class="main__gallery__subtitle">
-              Первое музыкальное издательство
+              <img src="./images/icons/color-logo.svg"> Первый музыкальный
             </div>
             <div class="main__gallery__title">
               Feduk — Бэнгер
             </div>
             <div class="main__gallery__info">
+              <svg class="main__gallery__corners" viewbox="0 0 365 40" fill="none">
+                <path fill="#79C2BE" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V40H40C17.9086 40 0 22.0914 0 0ZM325 40H365V0C365 22.0914 347.091 40 325 40Z" />
+              </svg>
               <div class="main__gallery__mob-title">Feduk — Бэнгер</div>
               Самый, самый свежий хит, от короля летних хитов, слушайте на всех стриминговых площадках прямо сейчас!
             </div>
           </li>
           <li data-track-name="Feduk — Бэнгер (prod. Cream Soda) 2" data-track-url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" class="splide__slide main__block">
+            <img class="main__gallery__img" src="./images/main/main_gallery_1.png" alt="">
             <div class="main__gallery__subtitle">
-              Первое музыкальное издательство
+              <img src="./images/icons/color-logo.svg"> Первый музыкальный
             </div>
             <div class="main__gallery__title">
               Feduk — Бэнгер
             </div>
             <div class="main__gallery__info">
+              <svg class="main__gallery__corners" viewbox="0 0 365 40" fill="none">
+                <path fill="#79C2BE" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V40H40C17.9086 40 0 22.0914 0 0ZM325 40H365V0C365 22.0914 347.091 40 325 40Z" />
+              </svg>
               <div class="main__gallery__mob-title">Feduk — Бэнгер</div>
               Самый, самый свежий хит, от короля летних хитов, слушайте на всех стриминговых площадках прямо сейчас!
             </div>
@@ -125,92 +134,89 @@
   </section>
 
   <section class="main__numbers main__numbers_desktop numbers main__block">
-    <div class="main__numbers__blob main__numbers__blob_bl"></div>
-    <div class="main__numbers__blob main__numbers__blob_tl"></div>
-    <div class="main__numbers__blob main__numbers__blob_tr"></div>
-    <div class="main__numbers__blob main__numbers__blob_mid"></div>
-    <div class="main__numbers__blob main__numbers__blob_br"></div>
-    <div class="numbers__menu">
-      <div class="numbers__item numbers__item_active">
-        <span>
-          Стримы
-        </span>
+    <div class="numbers__back">
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__blob"></div>
+      <div class="numbers__border"></div>
+      <div class="numbers__border"></div> 
+    </div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic"
+          stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix in='name' mode='matrix'
+            values='1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 30 -15'></feColorMatrix>
+          <feBlend in='SourceGraphic'></feBlend>
+        </filter>
+      </defs>
+    </svg>
+    <div class="numbers__info">
+      <div data-index="1" class="numbers__info__slide numbers__info__slide_active">
+        <div class="numbers__info__title">
+          15 000 000
+        </div>
+        <div class="numbers__info__text">
+          Ежемесячное потребление стримов (прослушиваний) каталога «Первого музыкального»
+        </div>
       </div>
-      <div class="numbers__item">
-        <span>
-          Каталог
-        </span>
+      <div data-index="2" class="numbers__info__slide">
+        <div class="numbers__info__title">
+          1 000 000
+        </div>
+        <div class="numbers__info__text">
+          Более 1 миллиона музыкальных произведений в каталоге «Первого Музыкального»
+        </div>
       </div>
-      <div class="numbers__item">
-        <span>
-          В России
-        </span>
+      <div data-index="3" class="numbers__info__slide">
+        <div class="numbers__info__title">
+          <span>более</span> 30%
+        </div>
+        <div class="numbers__info__text">
+          Такая доля каталога “Первого Музыкального” на рынке аудио-произведений в России
+        </div>
       </div>
-      <div class="numbers__item numbers__item_noborder">
-        <span>
-          Цифровые площадки
-        </span>
-      </div>
-      <div class="numbers__dividers">
-        <div class="numbers__dividers__item"></div>
-        <div class="numbers__dividers__item"></div>
-        <div class="numbers__dividers__item"></div>
-        <div class="numbers__dividers__item"></div>
-      </div>
-      <div class="numbers__path"></div>
-      <div class="numbers__arrow">
-        <svg width="26" height="26" viewbox="0 0 26 26" fill="none">
-          <path d="M24 13H3.00725e-07" stroke="#6801E6" stroke-width="2" />
-          <path d="M9.6 1L24 13L9.6 25" stroke="#6801E6" stroke-width="2" />
-        </svg>
+      <div data-index="4" class="numbers__info__slide">
+        <div class="numbers__info__title">
+          20% <span>рынка</span>
+        </div>
+        <div class="numbers__info__text">
+          Занимает группа компаний «Первого Музыкального» в цифровых сервисах
+        </div>
       </div>
     </div>
-    <div class="numbers__slides">
-      <div class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide main__block">
-              <div class="numbers__slide">
-                <div class="numbers__slide__count">
-                  1 500 000 000
-                </div>
-                <div class="numbers__slide__info">
-                  Ежемесячное потребление стримов (прослушиваний) каталога «Первого музыкального»
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide main__block">
-              <div class="numbers__slide">
-                <div class="numbers__slide__count">
-                  1 000 000
-                </div>
-                <div class="numbers__slide__info">
-                  Более 1 миллиона музыкальных произведений в каталоге «Первого Музыкального»
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide main__block">
-              <div class="numbers__slide">
-                <div class="numbers__slide__count">
-                  <span>более</span> 30%
-                </div>
-                <div class="numbers__slide__info">
-                  Такая доля каталога “Первого Музыкального” на рынке аудио-произведений в России
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide main__block">
-              <div class="numbers__slide numbers__slide_dark">
-                <div class="numbers__slide__count">
-                  20% <span>рынка</span>
-                </div>
-                <div class="numbers__slide__info">
-                  Занимает группа компаний «Первого Музыкального» в цифровых сервисах
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+    <div class="numbers__controls">
+      <div class="numbers__controls__item numbers__controls__item_active">
+        <img src="./images/icons/arrow-white.svg" alt="">
+        <span data-control="1">Стримы</span>
+      </div>
+      <div class="numbers__controls__item">
+        <img src="./images/icons/arrow-white.svg" alt="">
+        <span data-control="2">Каталог</span>
+      </div>
+      <div class="numbers__controls__item">
+        <img src="./images/icons/arrow-white.svg" alt="">
+        <span data-control="3">В России</span>
+      </div>
+      <div class="numbers__controls__item">
+        <img src="./images/icons/arrow-white.svg" alt="">
+        <span data-control="4">Цифровые площадки</span>
       </div>
     </div>
   </section>
@@ -225,7 +231,7 @@
           <li data-title="Стримы" class="splide__slide main__block">
             <div class="numbers__slide">
               <div class="numbers__slide__count">
-                1 500 000 000
+                15 000 000
               </div>
               <div class="numbers__slide__info">
                 Ежемесячное потребление стримов (прослушиваний) каталога «Первого музыкального»
@@ -431,6 +437,7 @@
         <div class="join__info__submit">
           <div class="join__info__slider join__slider">
             <div class="join__slider__send">Отправить демо</div>
+            <div class="join__slider__send join__slider__send_finish"></div>
             <div class="join__slider__contol">
               <svg width="26" height="26" viewbox="0 0 26 26" fill="none">
                 <path d="M24 13H3.00725e-07" stroke="#DDCEF0" stroke-width="2" />
@@ -463,45 +470,89 @@
   </section>
 
   <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__top">
-        <div class="footer__map">
-          <div class="footer__title">
-            Карта сайта
+    <div class="footer__block">
+      <div class="footer__row">
+        <img src="./images/icons/text-logo.svg" class="footer__row__logo">
+        <div class="footer__row__text">
+          <div class="footer__map">
+            <div class="footer__title">
+              Карта сайта:
+            </div>
+            <div class="footer__mobile__block">
+              <a href="#">О нас</a>, <a href="#">Услуги</a>, <a href="#">Букинг</a>, <a href="#">Артисты</a>, <a href="#">Контакты</a>
+            </div>
+            <div class="footer__text">
+              <div class="footer__text__col">
+                <a href="#" class="footer__text__row">
+                  О нас
+                </a>
+                <a href="#" class="footer__text__row">
+                  Услуги
+                </a>
+              </div>
+              <div class="footer__text__col">
+                <a href="#" class="footer__text__row">
+                  Букинг
+                </a>
+                <a href="#" class="footer__text__row">
+                  Каталог
+                </a>
+              </div>
+              <div class="footer__text__col">
+                <a href="#" class="footer__text__row">
+                  Артисты
+                </a>
+                <a href="#" class="footer__text__row">
+                  Контакты
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="footer__links">
-            <a class="footer__links__link" href="history.html">О нас</a>,
-            <a class="footer__links__link" href="directions.html">Услуги</a>,
-            <a class="footer__links__link" href="booking.html">Букинг</a>,
-            <a class="footer__links__link" href="artists.html">Артисты</a>,
-            <a class="footer__links__link" href="contacts.html">Контакты</a>
-          </div>
-        </div>
-        <div class="footer__networks">
-          <div class="footer__title">
-            Мы в социальных сетях
-          </div>
-          <div class="footer__links">
-            <a class="footer__links__link" href="">Facebook</a>,
-            <a class="footer__links__link" href="">Instagram</a>,
-            <a class="footer__links__link" href="">YouTube</a>,
-            <a class="footer__links__link" href="">VK</a>
+          <div class="footer__social">
+            <div class="footer__title">
+              Социальные сети:
+            </div>
+            <div class="footer__mobile__block">
+              <a href="#">Facebook</a>, <a href="#">VK</a>, <a href="#">Instagram</a>, <a href="#">YouTube</a>
+            </div>
+            <div class="footer__text">
+              <div class="footer__text__col">
+                <a href="#" class="footer__text__row">
+                  <img class="icon" src="./images/icons/vk.svg" alt="Вконтакте">
+                  Вконтакте
+                </a>
+                <a href="#" class="footer__text__row">
+                  <img class="icon" src="./images/icons/facebook.svg" alt="Facebook">
+                  Facebook
+                </a>
+              </div>
+              <div class="footer__text__col">
+                <a href="#" class="footer__text__row">
+                  <img class="icon" src="./images/icons/youtube.svg" alt="Youtube">
+                  Youtube
+                </a>
+                <a href="#" class="footer__text__row">
+                  <img class="icon" src="./images/icons/instagram.svg" alt="Instagram">
+                  Instagram
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="footer__address">
-        127015, г. Москва, <br>
-        ул. Новодмитровская, дом 2к1, 15 этаж
+      <img class="footer__mobile-logo" src="./images/icons/color-logo.svg">
+      <div class="footer__button">
+        <a href="#" class="footer__button__link">Правообладателю</a>
+        <div class="footer__button__info">
+          1996-2020 © Первое Музыкальное Издательство
+        </div>
       </div>
-      <a href="#" target="_blank" class="footer__rights">
-        <div class="footer__rights__holder">Правообладателю</div>
-        <div class="footer__rights__sign">1996-2020 © Первое Музыкальное Издательство</div>
-        <img class="footer__rights__img" src="images/icons/copyright.svg" alt="">
-        <img class="footer__rights__img footer__rights__img_hover" src="images/icons/copyright-light.svg" alt="">
-      </a>
     </div>
     <div class="footer__mobile">
-      1996-2020 © Первое Музыкальное Издательство
+      <div class="footer__mobile__text">
+        1996-2020 © Первое Музыкальное Издательство
+      </div>
+      <img src="./images/icons/copyright-gray.svg">
     </div>
   </footer>
 
