@@ -787,7 +787,7 @@
 }
 
 .numbers__blob:nth-of-type(4) {
-  left: 85%;
+  left: 75%;
   animation-delay: 4s;
   animation-duration: 7s;
   width: 160px;
