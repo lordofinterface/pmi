@@ -346,7 +346,7 @@ html {
 
 .footer__button__link {
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 27px;
   text-decoration: none;
   background-image: url('../images/icons/new_tab.svg');
