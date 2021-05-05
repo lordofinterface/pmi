@@ -685,6 +685,7 @@ html {
   }
 
   .footer__row {
+    margin-left: 0;
     margin-bottom: 50px;
   }
 
