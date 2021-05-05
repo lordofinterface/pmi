@@ -150,20 +150,12 @@
       <div class="numbers__blob"></div>
       <div class="numbers__blob"></div>
       <div class="numbers__blob"></div>
-      <div class="numbers__border"></div>
-      <div class="numbers__border"></div> 
     </div>
     <svg>
       <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic"
-          stdDeviation="10"></feGaussianBlur>
-          <feColorMatrix in='name' mode='matrix'
-            values='1 0 0 0 0
-                    0 1 0 0 0
-                    0 0 1 0 0
-                    0 0 0 30 -15'></feColorMatrix>
-          <feBlend in='SourceGraphic'></feBlend>
+        <filter id="goo" color-interpolation-filters="sRGB">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
         </filter>
       </defs>
     </svg>

@@ -756,15 +756,17 @@
   background: #771ae9;
   position: absolute;
   top: -200px;
+  transform: translateZ(0);
   animation: fall 12s infinite;
+  animation-delay: 200;
 }
 
 @keyframes fall {
-  0% {
-    top: -200px;
+  from {
+    transform: translateY(0);
   }
-  100% {
-    top: 100%;
+  to {
+    transform: translateY(600px);
   }
 }
 
@@ -854,13 +856,6 @@
 .numbers__blob:nth-of-type(15) {
   left: 5%;
   animation-delay: 8s;
-}
-
-.numbers__border {
-  position: absolute;
-  width: 100%;
-  background: #771ae9;
-  height: 1%;
 }
 
 .numbers__border:nth-of-type(1) {
