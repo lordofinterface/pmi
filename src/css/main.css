@@ -981,6 +981,15 @@
 }
 
 @media (max-width: 920px) {
+  @keyframes fall {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(800px);
+    }
+  }
+
   .join__slider__send_finish:before {
     content: 'Спасибо! Пожалуйста дождитесь ответа на письмо.';
   }
