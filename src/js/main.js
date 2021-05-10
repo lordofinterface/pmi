@@ -60,6 +60,8 @@ function initMobileNumbersSlider() {
     pagination: false,
     type: 'loop',
     arrows: false,
+    autoplay: true,
+    interval: 6000
   }).mount();
 
   updateTitleAndNext();
@@ -85,16 +87,22 @@ function initNumbersSlider() {
   const controls = document.querySelectorAll('.numbers__controls__item span');
   const controlContainers = document.querySelectorAll('.numbers__controls__item');
   const infoBlocks = document.querySelectorAll('.numbers__info__slide');
+  let controlClicked = false;
 
   controls.forEach(control => {
     control.addEventListener('click', e => {
-      showInfo(control.getAttribute('data-control'));
-      controlContainers.forEach(el => {
-        el.classList.remove('numbers__controls__item_active');
-      });
-      control.parentElement.classList.add('numbers__controls__item_active');
+      clickControl(control);
     });
   });
+
+  function clickControl(control) {
+    showInfo(control.getAttribute('data-control'));
+    controlContainers.forEach(el => {
+      el.classList.remove('numbers__controls__item_active');
+    });
+    control.parentElement.classList.add('numbers__controls__item_active');
+    controlClicked = true;
+  }
 
   function showInfo(index) {
     const selectedBlock = document.querySelector(`.numbers__info__slide[data-index="${index}"]`);
@@ -104,6 +112,17 @@ function initNumbersSlider() {
     });
     selectedBlock.classList.add('numbers__info__slide_active');
   }
+
+  setInterval(() => {
+    if (!controlClicked) {
+      const currentSection = document.querySelector('.numbers__controls__item_active span');
+      const currentIndex = currentSection.getAttribute('data-control');
+      const nextIndex = currentIndex == 4 ? 1 : parseInt(currentIndex) + 1;
+      const nextControl = document.querySelector(`.numbers__controls__item span[data-control="${nextIndex}"]`);
+      clickControl(nextControl);
+    }
+    controlClicked = false;
+  }, 6000);
 }
 
 function initVinylOpen() {
