@@ -352,6 +352,7 @@ html {
   background-image: url('../images/icons/new_tab.svg');
   background-repeat: no-repeat;
   padding-left: 40px;
+  color: #6801E6;
 }
 
 .footer__button__link:hover {
