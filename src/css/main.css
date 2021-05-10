@@ -727,7 +727,7 @@
   justify-content: center;
   transform: translateX(-1400px);
   opacity: 0;
-  transition: all 0.35s ease-in;
+  transition: all 0.55s ease-in-out;
 }
 
 .numbers__info__slide_active {
