@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initVinylOpen();
   initFormProgress();
   Player.init();
-  // initParallax();
 });
 
 function initTopSlider() {
@@ -18,6 +17,8 @@ function initTopSlider() {
     type: 'loop',
     pagination: false,
     arrows: false,
+    autoplay: true,
+    interval: 6000
   }).mount();
   updateCounter();
 
@@ -37,13 +38,6 @@ function initTopSlider() {
   
   rightMobArrow.addEventListener('click', function () {
     topSlider.go(topSlider.index + 1);
-  });
-
-  topSlider.on( 'move', function() {
-    updateCounter();
-    setTimeout(() => {
-      Player.update();
-    }, 500);
   });
 
   function updateCounter() {

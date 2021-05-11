@@ -34,6 +34,17 @@
   object-fit: cover;
 }
 
+.main__gallery .splide .main__block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.05);
+  z-index: 0;
+}
+
 .main__gallery__mob-title {
   display: none;
 }
@@ -55,6 +66,8 @@
   padding-left: 3px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .main__gallery__subtitle img {
@@ -98,6 +111,8 @@
   font-size: 64px;
   line-height: 74px;
   color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
 .main__gallery__info {

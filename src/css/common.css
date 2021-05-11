@@ -38,7 +38,7 @@ html {
 .menu {
   position: absolute;
   right: 12px;
-  top: 34px;
+  top: 36px;
   z-index: 99;
   display: flex;
   padding: 0 90px 0 30px;
@@ -66,7 +66,7 @@ html {
   padding: 20px 0;
   transition: opacity 0.15s ease-in;
   position: absolute;
-  right: 90px;
+  right: 75px;
   z-index: 1;
 }
 
