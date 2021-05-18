@@ -416,6 +416,7 @@
   height: 100%;
   display: block;
   border-radius: 40px;
+  object-fit: cover;
 }
 
 .main__join {
